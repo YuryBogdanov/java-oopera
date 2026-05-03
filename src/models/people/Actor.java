@@ -7,5 +7,9 @@ public class Actor extends Person {
         super(name, surname, gender);
         this.height = height;
     }
+
+    public String getActorInfo() {
+        return getName() + " " + getSurname() + "(рост: " + height + " см)";
+    }
 }
 

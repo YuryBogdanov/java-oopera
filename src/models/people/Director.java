@@ -7,4 +7,8 @@ public class Director extends Person {
         super(name, surname, gender);
         this.showsCount = showsCount;
     }
+
+    public String getDirectorInfo() {
+        return "Режиссёр спектакля: " + getName() + " " + getSurname();
+    }
 }

@@ -10,6 +10,14 @@ public class Person {
         this.surname = surname;
         this.gender = gender;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
 }
 
 enum Gender {

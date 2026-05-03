@@ -20,4 +20,15 @@ public class Show {
         this.director = director;
         this.actorsList = actorsList;
     }
+
+    public void printDirector() {
+        System.out.println(director.getDirectorInfo());
+    }
+
+    public void printActorsList() {
+        System.out.println("Список актёров, задействованных в спектакле:");
+        for (Actor actor : actorsList) {
+            System.out.println(actor.getActorInfo());
+        }
+    }
 }
