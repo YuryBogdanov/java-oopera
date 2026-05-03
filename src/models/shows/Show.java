@@ -31,4 +31,32 @@ public class Show {
             System.out.println(actor.getActorInfo());
         }
     }
+
+    public void addActor(Actor actor) {
+        if (actorsList.contains(actor)) {
+            System.out.println("Этот актёр уже задействован в спектакле");
+        } else {
+            actorsList.add(actor);
+        }
+    }
+
+    public void replaceActor(String surnameToReplace, Actor replacementActor) {
+        Actor actorToReplace = findActorBySurname(surnameToReplace);
+        if (actorToReplace == null) {
+            System.out.println("Искомый актёр не задействован в спектакле");
+            return;
+        }
+        actorsList.remove(actorToReplace);
+        actorsList.add(replacementActor);
+        System.out.println("Актёр " + surnameToReplace + " заменён на актёра " + replacementActor.getSurname());
+    }
+
+    private Actor findActorBySurname(String surname) {
+        for (Actor actor : actorsList) {
+            if (actor.getSurname().equals(surname)) {
+                return actor;
+            }
+        }
+        return null;
+    }
 }
