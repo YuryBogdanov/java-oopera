@@ -26,7 +26,7 @@ public class Show {
     }
 
     public void printActorsList() {
-        System.out.println("Список актёров, задействованных в спектакле:");
+        System.out.println("Список актёров, задействованных в спектакле '" + title + "': ");
         System.out.println(actorsList);
     }
 
@@ -41,12 +41,13 @@ public class Show {
     public void replaceActor(String surnameToReplace, Actor replacementActor) {
         Actor actorToReplace = findActorBySurname(surnameToReplace);
         if (actorToReplace == null) {
-            System.out.println("Искомый актёр не задействован в спектакле");
+            System.out.println("Искомый актёр не задействован в спектакле '" + title + "'");
             return;
         }
         actorsList.remove(actorToReplace);
         actorsList.add(replacementActor);
-        System.out.println("Актёр " + surnameToReplace + " заменён на актёра " + replacementActor.getSurname());
+        System.out.println("В спектакле '" + title + "' актёр " + surnameToReplace + " заменён на актёра " +
+                replacementActor.getSurname());
     }
 
     private Actor findActorBySurname(String surname) {

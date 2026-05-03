@@ -22,7 +22,7 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return getName() + " " + getSurname() + "(рост: " + height + " см)";
+        return getName() + " " + getSurname() + " (рост: " + height + " см)";
     }
 
     public int getHeight() {
