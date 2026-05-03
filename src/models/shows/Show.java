@@ -1,3 +1,8 @@
+package models.shows;
+
+import models.people.Actor;
+import models.people.Director;
+
 import java.util.ArrayList;
 
 public class Show {
