@@ -11,7 +11,10 @@ public class Show {
     private Director director;
     private ArrayList<Actor> actorsList;
 
-    public Show(String title, int duration, Director director, ArrayList<Actor> actorsList) {
+    public Show(String title,
+                int duration,
+                Director director,
+                ArrayList<Actor> actorsList) {
         this.title = title;
         this.duration = duration;
         this.director = director;
