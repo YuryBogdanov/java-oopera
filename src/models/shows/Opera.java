@@ -7,7 +7,7 @@ import models.people.Person;
 import java.util.ArrayList;
 
 public class Opera extends MusicalShow {
-    private int choirSize;
+    private final int choirSize;
 
     public Opera(String title,
                  int duration,

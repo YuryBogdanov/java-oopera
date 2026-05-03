@@ -7,7 +7,7 @@ import models.people.Person;
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    private Person musicAuthor;
+    private final Person musicAuthor;
     private String librettoText;
 
     public MusicalShow(String title,

@@ -1,7 +1,7 @@
 package models.people;
 
 public class Director extends Person {
-    private int showsCount;
+    private final int showsCount;
 
     public Director(String name, String surname, Gender gender, int showsCount) {
         super(name, surname, gender);

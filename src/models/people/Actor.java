@@ -1,7 +1,7 @@
 package models.people;
 
 public class Actor extends Person {
-    private int height;
+    private final int height;
 
     public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
@@ -10,8 +10,9 @@ public class Actor extends Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
+        if (obj.getClass() != this.getClass()) return false;
         if (obj == null) return false;
+        if (this == obj) return true;
 
         Actor otherActor = (Actor) obj;
 

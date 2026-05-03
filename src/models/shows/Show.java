@@ -6,10 +6,10 @@ import models.people.Director;
 import java.util.ArrayList;
 
 public class Show {
-    private String title;
-    private int duration;
-    private Director director;
-    private ArrayList<Actor> actorsList;
+    private final String title;
+    private final int duration;
+    private final Director director;
+    private final ArrayList<Actor> actorsList;
 
     public Show(String title,
                 int duration,

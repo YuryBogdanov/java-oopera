@@ -7,7 +7,7 @@ import models.people.Person;
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow {
-    private Person choreographer;
+    private final Person choreographer;
 
     public Ballet(String title,
                   int duration,
