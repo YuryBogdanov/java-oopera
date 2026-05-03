@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MusicalShow extends Show {
     private final Person musicAuthor;
-    private String librettoText;
+    private final String librettoText;
 
     public MusicalShow(String title,
                        int duration,
