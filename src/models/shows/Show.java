@@ -22,14 +22,12 @@ public class Show {
     }
 
     public void printDirector() {
-        System.out.println(director.getDirectorInfo());
+        System.out.println(director);
     }
 
     public void printActorsList() {
         System.out.println("Список актёров, задействованных в спектакле:");
-        for (Actor actor : actorsList) {
-            System.out.println(actor.getActorInfo());
-        }
+        System.out.println(actorsList);
     }
 
     public void addActor(Actor actor) {

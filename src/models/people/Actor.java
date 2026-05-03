@@ -20,7 +20,8 @@ public class Actor extends Person {
                 && this.getHeight() == otherActor.getHeight();
     }
 
-    public String getActorInfo() {
+    @Override
+    public String toString() {
         return getName() + " " + getSurname() + "(рост: " + height + " см)";
     }
 
