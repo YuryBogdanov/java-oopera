@@ -1,7 +1,9 @@
 package models.people;
 
+import java.util.Objects;
+
 public class Actor extends Person {
-    private final int height;
+    private int height;
 
     public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
@@ -22,12 +24,21 @@ public class Actor extends Person {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getSurname(), getGender(), height);
+    }
+
+    @Override
     public String toString() {
         return getName() + " " + getSurname() + " (рост: " + height + " см)";
     }
 
     public int getHeight() {
         return height;
+    }
+
+    public void setHeight(int newHeight) {
+        height = newHeight;
     }
 }
 
