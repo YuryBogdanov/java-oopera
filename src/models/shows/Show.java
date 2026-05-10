@@ -6,10 +6,10 @@ import models.people.Director;
 import java.util.ArrayList;
 
 public class Show {
-    private final String title;
-    private final int duration;
-    private final Director director;
-    private final ArrayList<Actor> actorsList;
+    private String title;
+    private int duration;
+    private Director director;
+    private ArrayList<Actor> actorsList;
 
     public Show(String title,
                 int duration,
@@ -19,6 +19,45 @@ public class Show {
         this.duration = duration;
         this.director = director;
         this.actorsList = actorsList;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
+    public ArrayList<Actor> getActorsList() {
+        return actorsList;
+    }
+
+    public void setActorsList(ArrayList<Actor> actorsList) {
+        // Здесь дополнительное приседание с созданием нового списка,
+        // чтобы псследующие изменения этого списка не аффектили тот список, который передали.
+        // Если тут было достаточно this.actorsList = actorsList - напишите в ревью, пожалуйста :)
+        if (actorsList == null) {
+            this.actorsList = new ArrayList<>();
+        } else {
+            this.actorsList = new ArrayList<>(actorsList);
+        }
     }
 
     public void printDirector() {
