@@ -37,8 +37,8 @@ public class Actor extends Person {
         return height;
     }
 
-    public void setHeight(int newHeight) {
-        height = newHeight;
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
 

@@ -17,7 +17,7 @@ public class Director extends Person {
         return showsCount;
     }
 
-    public void setShowsCount(int newShowsCount) {
-        showsCount = newShowsCount;
+    public void setShowsCount(int showsCount) {
+        this.showsCount = showsCount;
     }
 }
